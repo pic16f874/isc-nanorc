@@ -4,8 +4,9 @@ syntax "isc_cos-file" "\.(cos|cls)$"
 
 
 color brightmagenta "[Cc]lass|[Ee]xtends|[Pp]arameter|[Ii]ndex| [Oo]n |[Pp]roperty| [Aa]s |[Mm]ethod|[Cc]lass[Mm]ethod|[Ss]torage"
-color brightgreen "[Ss]et|[Kk]ill|[Ww]rite|[Dd]o|[Ww]hile|[Ff]or|[Qq]uit|[Hh]alt"
+color brightgreen "[Ss]et |[Kk]ill |[Ww]rite|[Dd]o |[Ww]hile|[Ff]or |[Ii]f |[Ee]lse|[Tt]ry|[Cc]atch|[Qq]uit|[Hh]alt"
 
+color brightyellow,green "\${3}OK"
 
 # Strings.  In general you will want your strings and comments to come last,
 # because highlighting rules are applied in the order they are read in.
@@ -14,7 +15,8 @@ color yellow ""([^"]|\\")*"" "<[^[:blank:]=]*>"
 # and sometimes colours things that shouldn't be coloured.
 ###color brightyellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
 
-color blue "^;.*$"
+color blue "^[[:space:]]*;.*$"
+color blue "^[[:space:]]*#;.*$"
 color blue "^[[:space:]]*//.*$"
 #color blue "^///.*$"
 
@@ -22,5 +24,5 @@ color blue "^[[:space:]]*//.*$"
 color brightwhite,yellow "\<(FIXME|TODO|XXX)\>"
 
 # Trailing whitespace.
-color ,green "[[:space:]]+$"
+#color ,green "[[:space:]]+$"
 
