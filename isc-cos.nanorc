@@ -3,8 +3,9 @@ syntax "isc_cos-file" "\.(cos|cls)$"
 #color red "\<[-+]?([1-9][0-9]*|0)?\>"
 
 
-#color brightmagenta "class|set|kill|write|do"
-color brightgreen "class|set|kill|write|do"
+color brightmagenta "[Cc]lass|[Ee]xtends|[Pp]arameter|[Ii]ndex| [Oo]n |[Pp]roperty| [Aa]s |[Mm]ethod|[Cc]lass[Mm]ethod|[Ss]torage"
+color brightgreen "[Ss]et|[Kk]ill|[Ww]rite|[Dd]o|[Ww]hile|[Ff]or|[Qq]uit|[Hh]alt"
+
 
 # Strings.  In general you will want your strings and comments to come last,
 # because highlighting rules are applied in the order they are read in.
@@ -13,8 +14,8 @@ color yellow ""([^"]|\\")*"" "<[^[:blank:]=]*>"
 # and sometimes colours things that shouldn't be coloured.
 ###color brightyellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
 
-color brightblue "^;.*$"
-color brightblue "^[[:space:]]//.*$"
+color blue "^;.*$"
+color blue "^[[:space:]]*//.*$"
 #color blue "^///.*$"
 
 # Reminders.
