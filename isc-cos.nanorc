@@ -1,0 +1,25 @@
+syntax "isc_cos-file" "\.(cos|cls)$"
+
+#color red "\<[-+]?([1-9][0-9]*|0)?\>"
+
+
+#color brightmagenta "class|set|kill|write|do"
+color brightgreen "class|set|kill|write|do"
+
+# Strings.  In general you will want your strings and comments to come last,
+# because highlighting rules are applied in the order they are read in.
+color yellow ""([^"]|\\")*"" "<[^[:blank:]=]*>"
+# Multiline strings.  This regex is VERY resource intensive,
+# and sometimes colours things that shouldn't be coloured.
+###color brightyellow start=""(\\.|[^"])*\\[[:space:]]*$" end="^(\\.|[^"])*""
+
+color brightblue "^;.*$"
+color brightblue "^[[:space:]]//.*$"
+#color blue "^///.*$"
+
+# Reminders.
+color brightwhite,yellow "\<(FIXME|TODO|XXX)\>"
+
+# Trailing whitespace.
+color ,green "[[:space:]]+$"
+
