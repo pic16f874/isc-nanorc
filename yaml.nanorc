@@ -1,0 +1,35 @@
+### save this file as /usr/share/nano/yaml.nanorc
+
+syntax "yaml" "\.ya?ml$"
+#comment "#"
+header "^---" "%YAML"
+
+# Values
+color yellow "(:|^|\s)+\S+"
+
+# Keys
+color brightgreen "(^|\s+).*+\s*:(\s|$)"
+
+# Special values
+color green "[:-]\s+(true|false|null)\s*$"
+color green "[:-]\s+[0-9]+\.?[0-9]*(\s*($|#))"
+color green "(^| )!!(binary|bool|float|int|map|null|omap|seq|set|str) "
+
+# Separator
+color brightwhite "^\s+-"
+color brightwhite ":(\s|\t|$)"
+
+# Comments
+color brightblue "(^|[[:space:]])#.*$"
+
+
+## Non closed quote
+color ,red "['\"][^['\"]]*$"
+
+## Closed quotes
+color brightyellow "['\"].*['\"]"
+
+## Equal sign
+color brightgreen ":( |$)"
+
+
